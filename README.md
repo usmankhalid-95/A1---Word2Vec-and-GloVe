@@ -75,6 +75,6 @@ git clone https://github.com/usmankhalid-95/A1---Word2Vec-and-GloVe.git
 
 ### Screenshots
 - ![GloVe Model Results](Glove.png)
-- ![Skipgram Model Results](Skipgram.png)
 - ![Skipgram Negative Model Results](Skipgram_negative.png)
+- ![Skipgram Model Results](Skipgram.png)
 
