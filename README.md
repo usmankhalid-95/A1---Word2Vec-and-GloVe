@@ -7,7 +7,6 @@ This web application allows users to search for the most similar contexts to the
 - Choose from pre-trained models: **GloVe**, **Skipgram Negative**, or **Skipgram**.
 - Displays the top 10 similar contexts for the input query.
 - Results are split into two columns for better readability.
-- Responsive design, works on both desktop and mobile devices.
 
 ### Models Used
 1. **GloVe**: Pre-trained GloVe embeddings.
@@ -29,13 +28,20 @@ This web application allows users to search for the most similar contexts to the
 ```bash
 git clone https://github.com/yourusername/context-similarity-search.git
 cd context-similarity-search
+```
 
+2. Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
 
 ### How It Works
 1. The user enters a query in the search box and selects a pre-trained model (GloVe, Skipgram Negative, or Skipgram).
 2. The app then computes the dot product between the query and the pre-trained corpus to determine the top 10 most similar contexts.
 3. The results are displayed in two columns, with each result showing the context and its similarity score.
 
+---
 
 ## Tasks Completed
 
@@ -83,8 +89,7 @@ cd context-similarity-search
 - Gensim library
 - Other dependencies mentioned in `requirements.txt`
 
-
-### Screen shots:
-    - `GloVe Model Results` with `Glove.png`
-    - `Skipgram Model Results` with `Skipgram.png`
-    - `Skipgram Negative Model Results` with `Skipgram Negative.png`
+### Screenshots
+- `GloVe Model Results` with `Glove.png`
+- `Skipgram Model Results` with `Skipgram.png`
+- `Skipgram Negative Model Results` with `Skipgram Negative.png`
