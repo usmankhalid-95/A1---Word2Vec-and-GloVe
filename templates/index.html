@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Context Similarity Search Application</title>
+    <style>
+        /* Reset some default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f7fc;
+            color: #333;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #3c6e71;
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            color: #3c6e71;
+            margin-bottom: 30px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+            text-align: left;
+            display: block;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .radio-group {
+            text-align: left;
+            margin-top: 10px;
+        }
+
+        /* Custom radio button styles */
+        .radio-group label {
+            display: inline-flex;
+            align-items: center;
+            margin-right: 20px;
+            cursor: pointer;
+            font-size: 1rem;
+            color: #333;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .radio-group input[type="radio"] {
+            display: none; /* Hide the default radio button */
+        }
+
+        .radio-group input[type="radio"] + span {
+            width: 20px;
+            height: 20px;
+            border: 2px solid #3c6e71;
+            border-radius: 50%;
+            margin-right: 10px;
+            position: relative;
+            transition: background-color 0.3s ease;
+        }
+
+        .radio-group input[type="radio"]:checked + span {
+            background-color: #3c6e71; /* Change color when checked */
+        }
+
+        .radio-group input[type="radio"]:checked + span::after {
+            content: '';
+            position: absolute;
+            top: 4px;
+            left: 4px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: white;
+        }
+
+        .radio-group input[type="radio"]:hover + span {
+            background-color: #a0d6d1;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #3c6e71;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+
+        button:hover {
+            background-color: #2f4f4f;
+        }
+
+        .error {
+            color: #e74c3c;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+
+        .results-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        .result-card {
+            background-color: #ffffff;
+            padding: 15px;
+            width: 48%;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .result-card strong {
+            font-size: 1.1rem;
+            color: #333;
+        }
+
+        .result-card span {
+            color: #888;
+        }
+
+        @media (max-width: 768px) {
+            .results-container {
+                flex-direction: column;
+            }
+
+            .result-card {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Context Similarity Search Application</h1>
+        <h3>Search similar contexts using pre-trained embeddings.</h3>
+
+        <form method="POST">
+            <div class="form-group">
+                <label for="query">Enter your search query:</label>
+                <input type="text" id="query" name="query" required>
+            </div>
+
+            <!-- Custom radio buttons for model selection -->
+            <div class="radio-group">
+                <label for="glove">
+                    <input type="radio" id="glove" name="model" value="GloVe" required>
+                    <span></span> GloVe
+                </label>
+                <label for="skipgram_negative">
+                    <input type="radio" id="skipgram_negative" name="model" value="Skipgram Negative" required>
+                    <span></span> Skipgram Negative
+                </label>
+                <label for="skipgram">
+                    <input type="radio" id="skipgram" name="model" value="Skipgram" required>
+                    <span></span> Skipgram
+                </label>
+            </div>
+
+            <button type="submit" name="enter">Enter</button>
+        </form>
+
+        {% if query %}
+            <h3>Search Results for "{{ query }}" using the {{ model_choice }} model:</h3>
+
+            {% if results_left %}
+                <div class="results-container">
+                    <div class="result-card">
+                        {% for context, score in results_left %}
+                            <div>
+                                <strong>{{ context }}</strong><br>
+                                <span>Score: {{ score }}</span>
+                            </div>
+                            <hr>
+                        {% endfor %}
+                    </div>
+
+                    <div class="result-card">
+                        {% for context, score in results_right %}
+                            <div>
+                                <strong>{{ context }}</strong><br>
+                                <span>Score: {{ score }}</span>
+                            </div>
+                            <hr>
+                        {% endfor %}
+                    </div>
+                </div>
+            {% endif %}
+
+            {% if error %}
+                <div class="error">{{ error }}</div>
+            {% endif %}
+        {% endif %}
+    </div>
+
+</body>
+</html>
