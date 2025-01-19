@@ -26,14 +26,7 @@ This web application allows users to search for the most similar contexts to the
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/context-similarity-search.git
-cd context-similarity-search
-```
-
-2. Install dependencies:
-
-```bash
-pip install -r requirements.txt
+git clone https://github.com/usmankhalid-95/A1---Word2Vec-and-GloVe.git
 ```
 
 ### How It Works
@@ -66,9 +59,9 @@ pip install -r requirements.txt
 | **Model**                        | **Window Size** | **Training Loss** | **Training Time** | **Syntactic Accuracy** | **Semantic Accuracy** |
 |-----------------------------------|:---------------:|:-----------------:|:----------------:|:----------------------:|:---------------------:|
 | **Skipgram**                      |        2        |      7.804078     |       0.838465       |           0            |           0           |
-| **Skipgram (with negative sampling)** |        2        |      0.252254     |       0.915590       |           0            |           0           |
+| **Skipgram negative sampling** |        2        |      0.252254     |       0.915590       |           0            |           0           |
 | **GloVe**                         |        2        |      1.761795     |       0.163522       |           0            |           0           |
-| **GloVe (Gensim implementation)** |       NA        |         NA        |         NA         |         0.50           |         0.93          |
+| **GloVe Gensim** |       NA        |         NA        |         NA         |         0.50           |         0.93          |
 
 ---
 
@@ -80,16 +73,8 @@ pip install -r requirements.txt
 
 ---
 
-## Setup and Usage
-
-### Requirements
-
-- Python 3.x
-- NLTK library
-- Gensim library
-- Other dependencies mentioned in `requirements.txt`
-
 ### Screenshots
-- `GloVe Model Results` with `Glove.png`
-- `Skipgram Model Results` with `Skipgram.png`
-- `Skipgram Negative Model Results` with `Skipgram Negative.png`
+- ![GloVe Model Results](Glove.png)
+- ![Skipgram Negative Model Results](Skipgram_negative.png)
+- ![Skipgram Model Results](Skipgram.png)
+
