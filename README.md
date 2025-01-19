@@ -73,14 +73,6 @@ git clone https://github.com/usmankhalid-95/A1---Word2Vec-and-GloVe.git
 
 ---
 
-## Setup and Usage
-
-### Requirements
-
-- Python 3.x
-- NLTK library
-- Gensim library
-
 ### Screenshots
 - ![GloVe Model Results](Glove.png)
 - ![Skipgram Negative Model Results](Skipgram_negative.png)
