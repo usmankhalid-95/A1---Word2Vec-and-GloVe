@@ -88,9 +88,9 @@ git clone https://github.com/usmankhalid-95/A1---Word2Vec-and-GloVe.git
 
 ### Short Writeup:
 
-As part of my assignment, I worked on implementing word embedding models using Flask (GloVe, Skipgram, and Skipgram with negatives). Unfortunately, I encountered an issue where the scores did not update correctly in the Flask application. While the predicted words were accurate, the overall score remained the same as the initial value, which caused the results to be incorrect.
+As the assignment requires using Flask, I worked on implementing word embedding models using Flask (GloVe, Skipgram, and Skipgram with negatives). Unfortunately, I encountered an issue where the scores did not update correctly in the Flask application. While the predicted words were accurate, the results in the right columns were incorrect. These columns had the same results as the left ones, which led to inaccurate score outputs.
 
 However, I successfully completed the implementation using **Streamlit**, and the scores were correct. Therefore, I suggest referring to the **Streamlit application** for accurate results.
 
-**Note**: Please use the Streamlit results (as shown in the screenshots above) for the correct output instead of the Flask version.
+**Note**: Please use the Streamlit results (as shown in the screenshots above) for the correct output scores instead of the Flask version. The predicted words are the same for both applications.
 
