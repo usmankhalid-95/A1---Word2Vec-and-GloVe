@@ -73,8 +73,26 @@ git clone https://github.com/usmankhalid-95/A1---Word2Vec-and-GloVe.git
 
 ---
 
-### Screenshots
-- ![GloVe Model Results](Glove.png)
-- ![Skipgram Negative Model Results](Skipgram_negative.png)
-- ![Skipgram Model Results](Skipgram.png)
+# Model Results
 
+### Results from GloVe, Skipgram, and Skipgram with Negatives
+As the assignment requires using Flask, I worked on implementing word embedding models using Flask (GloVe, Skipgram, and Skipgram with negatives). Unfortunately, I encountered an issue where the scores did not update correctly in the Flask application. While the predicted words were accurate, the results in the right columns were incorrect. These columns had the same results as the left ones, which led to inaccurate score outputs.
+
+However, I successfully completed the implementation using **Streamlit**, and the scores were correct. Therefore, I suggest referring to the **Streamlit application** for accurate results.
+
+**Note**: Please use the Streamlit results (as shown in the screenshots above) for the correct output scores instead of the Flask version. The predicted words are the same for both applications.
+
+### GloVe Model Results:
+- **Streamlit**: ![GloVe Model Results](streamlitGlove.png)
+- **Flask**: ![GloVe Model Results (Flask)](Glove.png)
+
+### Skipgram Negative Model Results:
+- **Streamlit**: ![Skipgram Negative Model Results](streamlitSkipgram_negative.png)
+- **Flask**: ![Skipgram Negative Model Results (Flask)](Skipgram_negative.png)
+
+### Skipgram Model Results:
+- **Streamlit**: ![Skipgram Model Results](streamlitSkipgram.png)
+- **Flask**: ![Skipgram Model Results (Flask)](Skipgram.png)
+
+### Missing Results:
+- ![Missing Results (Flask)](not_found.png)
