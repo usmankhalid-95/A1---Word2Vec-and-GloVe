@@ -88,7 +88,7 @@ However, I successfully completed the implementation using **Streamlit**, and th
 - ![Skipgram Negative Model Results](streamlitSkipgram_negative.png)
 - ![Skipgram Model Results](streamlitSkipgram.png)
 
-- ![GloVe Model Results (Flask)](glove.png)
-- ![Skipgram Negative Model Results (Flask)](skipgram_negative.png)
-- ![Skipgram Model Results (Flask)](skipgram.png)
+- ![GloVe Model Results (Flask)](Glove.png)
+- ![Skipgram Negative Model Results (Flask)](Skipgram_negative.png)
+- ![Skipgram Model Results (Flask)](Skipgram.png)
 - ![GloVe Model Results (Flask)](not_found.png)
