@@ -80,6 +80,7 @@ git clone https://github.com/usmankhalid-95/A1---Word2Vec-and-GloVe.git
 - ![GloVe Model Results](streamlitGlove.png)
 - ![Skipgram Negative Model Results](streamlitSkipgram_negative.png)
 - ![Skipgram Model Results](streamlitSkipgram.png)
+
 - ![GloVe Model Results (Flask)](glove.png)
 - ![Skipgram Negative Model Results (Flask)](skipgram_negative.png)
 - ![Skipgram Model Results (Flask)](skipgram.png)
