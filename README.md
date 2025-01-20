@@ -82,9 +82,6 @@ However, I successfully completed the implementation using **Streamlit**, and th
 
 **Note**: Please use the Streamlit results (as shown in the screenshots above) for the correct output scores instead of the Flask version. The predicted words are the same for both applications.
 
-
-# Model Results
-
 ### GloVe Model Results:
 - **Streamlit**: ![GloVe Model Results](streamlitGlove.png)
 - **Flask**: ![GloVe Model Results (Flask)](Glove.png)
