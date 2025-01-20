@@ -83,12 +83,19 @@ However, I successfully completed the implementation using **Streamlit**, and th
 **Note**: Please use the Streamlit results (as shown in the screenshots above) for the correct output scores instead of the Flask version. The predicted words are the same for both applications.
 
 
+# Model Results
 
-- ![GloVe Model Results](streamlitGlove.png)
-- ![Skipgram Negative Model Results](streamlitSkipgram_negative.png)
-- ![Skipgram Model Results](streamlitSkipgram.png)
+### GloVe Model Results:
+- **Streamlit**: ![GloVe Model Results](streamlitGlove.png)
+- **Flask**: ![GloVe Model Results (Flask)](Glove.png)
 
-- ![GloVe Model Results (Flask)](Glove.png)
-- ![Skipgram Negative Model Results (Flask)](Skipgram_negative.png)
-- ![Skipgram Model Results (Flask)](Skipgram.png)
-- ![GloVe Model Results (Flask)](not_found.png)
+### Skipgram Negative Model Results:
+- **Streamlit**: ![Skipgram Negative Model Results](streamlitSkipgram_negative.png)
+- **Flask**: ![Skipgram Negative Model Results (Flask)](Skipgram_negative.png)
+
+### Skipgram Model Results:
+- **Streamlit**: ![Skipgram Model Results](streamlitSkipgram.png)
+- **Flask**: ![Skipgram Model Results (Flask)](Skipgram.png)
+
+### Missing Results:
+- ![Missing Results (Flask)](not_found.png)
